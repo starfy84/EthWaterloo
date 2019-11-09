@@ -4,26 +4,54 @@ pragma solidity ^0.5.0;
  * The Parking contract allows the buying the selling of parking space
  */
 contract User {
-  string public firstName;
-  string public lastName;
-  House public house;
+  string firstName;
+  string lastName;
+
+  uint256 lat;
+  uint256 long;
   address payable wallet;
 
-
-
-  struct House {
-    uint256 lat;
-    uint256 long;
+  function getFirstName () public view returns(string memory) {
+    return firstName;
   }
 
-
-  constructor(string memory _firstName, string memory _lastName, address payable _wallet, uint256 _lat, uint256 _long) public {
+  function setFirstName (string memory _firstName) public {
     firstName = _firstName;
-    lastName = _lastName;
-    wallet = _wallet;
-    house = House(_lat,_long);
   }
 
+  function getLastName () public view returns(string memory) {
+    return lastName;
+  }
+
+  function setLastName (string memory _lastName) public {
+    lastName = _lastName;
+  }
+
+  function getLat () public view returns(uint256) {
+    return lat;
+  }
+
+  function setLat (uint256 _lat) public {
+    lat = _lat;
+  }
+
+  function getLong () public view returns(uint256) {
+    return long;
+  }
+
+  function setLong (uint256 _long) public {
+    long = _long;
+  }
+
+  function getWallet () public view returns(address payable){
+    return wallet;
+  }
+
+  function setWallet (address payable _wallet) public {
+    wallet = _wallet;
+  }
+  
+  
 }
 
 /**
