@@ -45,6 +45,7 @@ App = {
     loadAccount: async () => {
       // Set the current blockchain account
       App.account = web3.eth.accounts[0]
+      console.log( web3.eth.accounts[0])
     },
   
     loadContract: async () => {
