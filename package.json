@@ -1,5 +1,5 @@
 {
-  "name": "eth-todo-list",
+  "name": "eth-parking-app",
   "version": "1.0.0",
   "description": "Blockchain Parking By Ethereum",
   "main": "truffle-config.js",
@@ -10,7 +10,23 @@
     "dev": "lite-server",
     "test": "echo \"Error: no test specified\" && sexit 1"
   },
-  "author": "august.lin1320@gmail.com",
+  "contributors": [
+    {
+      "name": "Dereck Tu",
+      "email": "dereck.tu84@gmail.com",
+      "url": "https://www.google.com"
+    },
+    {
+      "name": "August Lin",
+      "email": "august.lin1320@gmail.com",
+      "url": "https://www.google.com"
+    },
+    {
+      "name": "Evan Zhang",
+      "email": "evan.zhang@student.tdsb.on.ca",
+      "url": "https://www.google.com"
+    }
+  ],
   "license": "ISC",
   "devDependencies": {
     "bootstrap": "4.1.3",
