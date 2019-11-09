@@ -17,7 +17,7 @@ contract User {
   }
   
 
-  constructor(string memory _firstName, string memory _lastName, address payable _wallet, uint256 memory _lat, uint256 memory _long) public {
+  constructor(string memory _firstName, string memory _lastName, address payable _wallet, uint256 _lat, uint256 _long) public {
     firstName = _firstName;
     lastName = _lastName;
     wallet = _wallet;
