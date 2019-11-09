@@ -11,6 +11,9 @@ contract User {
   uint256 long;
   address payable wallet;
 
+  //This is an event, dont ask me what it does
+  event Purchase(address indexed _buyer, uint256 _amount);
+
   function getFirstName () public view returns(string memory) {
     return firstName;
   }
@@ -51,6 +54,14 @@ contract User {
     wallet = _wallet;
   }
   
+  function getBalance () public view returns(uint256){
+    return wallet.balance;
+  }
+  
+  function buyNothing() public payable{
+    wallet.transfer(msg.value);
+    emit Purchase(msg.sender,1);
+  }
   
 }
 
