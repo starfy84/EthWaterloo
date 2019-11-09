@@ -15,19 +15,19 @@ contract User {
     uint256 lat;
     uint256 long;
   }
-  
+
 
   constructor(string memory _firstName, string memory _lastName, address payable _wallet, uint256 _lat, uint256 _long) public {
     firstName = _firstName;
     lastName = _lastName;
     wallet = _wallet;
     house = House(_lat,_long);
-  }  
+  }
 
 }
 
 /**
- * The Owned contract ensures that only the creator (deployer) of a 
+ * The Owned contract ensures that only the creator (deployer) of a
  * contract can perform certain tasks.
  */
 contract Owned {
