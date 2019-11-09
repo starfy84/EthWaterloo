@@ -16,14 +16,14 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x608060405260008055348015601357600080fd5b506099806100226000396000f3fe608060405260043610603e5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663b6cb58a581146043575b600080fd5b348015604e57600080fd5b5060556067565b60408051918252519081900360200190f35b6000548156fea165627a7a7230582005e4dbdfc341bb8185f0eb183cd8e0b166c9a20b48fa4b2f9249b71ffb104c570029",
-  "deployedBytecode": "0x608060405260043610603e5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663b6cb58a581146043575b600080fd5b348015604e57600080fd5b5060556067565b60408051918252519081900360200190f35b6000548156fea165627a7a7230582005e4dbdfc341bb8185f0eb183cd8e0b166c9a20b48fa4b2f9249b71ffb104c570029",
+  "bytecode": "0x608060405260008055348015601357600080fd5b506099806100226000396000f3fe608060405260043610603e5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663b6cb58a581146043575b600080fd5b348015604e57600080fd5b5060556067565b60408051918252519081900360200190f35b6000548156fea165627a7a723058208564e0815f3f35cf9ceb8b99a228b5d2544a278aa143b73f2a045e7e6d144c070029",
+  "deployedBytecode": "0x608060405260043610603e5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663b6cb58a581146043575b600080fd5b348015604e57600080fd5b5060556067565b60408051918252519081900360200190f35b6000548156fea165627a7a723058208564e0815f3f35cf9ceb8b99a228b5d2544a278aa143b73f2a045e7e6d144c070029",
   "sourceMap": "64:141:1:-;;;174:1;150:25;;64:141;8:9:-1;5:2;;;30:1;27;20:12;5:2;64:141:1;;;;;;;",
   "deployedSourceMap": "64:141:1:-;;;;;;;;;;;;;;;;;;;;;;;150:25;;8:9:-1;5:2;;;30:1;27;20:12;5:2;150:25:1;;;;;;;;;;;;;;;;;;;;;;;;:::o",
   "source": "//version\r\npragma solidity ^0.5.0;\r\n\r\n//declare smart contract\r\ncontract TodoList{\r\n    //keep track of the number of tasks inside the todo list\r\n    uint public taskCount = 0; //readable state variable\r\n}\r\n\r\n",
-  "sourcePath": "C:/Users/augus/Desktop/August/code/hackathons/ETHWaterloo2019/test/contracts/TodoList.sol",
+  "sourcePath": "C:/Users/augus/Desktop/August/code/hackathons/ETHWaterloo2019/APP/EthWaterloo/contracts/TodoList.sol",
   "ast": {
-    "absolutePath": "/C/Users/augus/Desktop/August/code/hackathons/ETHWaterloo2019/test/contracts/TodoList.sol",
+    "absolutePath": "/C/Users/augus/Desktop/August/code/hackathons/ETHWaterloo2019/APP/EthWaterloo/contracts/TodoList.sol",
     "exportedSymbols": {
       "TodoList": [
         62
@@ -107,7 +107,7 @@
     "src": "11:198:1"
   },
   "legacyAST": {
-    "absolutePath": "/C/Users/augus/Desktop/August/code/hackathons/ETHWaterloo2019/test/contracts/TodoList.sol",
+    "absolutePath": "/C/Users/augus/Desktop/August/code/hackathons/ETHWaterloo2019/APP/EthWaterloo/contracts/TodoList.sol",
     "exportedSymbols": {
       "TodoList": [
         62
@@ -203,7 +203,7 @@
     }
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-11-09T16:53:36.676Z",
+  "updatedAt": "2019-11-09T16:58:40.471Z",
   "devdoc": {
     "methods": {}
   },
