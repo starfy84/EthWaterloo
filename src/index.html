@@ -18,6 +18,9 @@
         <![endif]-->
 
         <style>
+            body {
+                background-color: rgba(0, 0, 255, 0.3);
+            }
             main {
                 margin-top: 60px;
             }
@@ -51,20 +54,26 @@
             </ul>
         </nav>
         <div class="container-fluid">
-
-            
-
-
-
             <div class="row">
-                <main role="main" class="col-lg-12 d-flex justify-content-center">
-                        2 CENTERED BUTTONS:
+                <main role="main" class="col-lg-12 d-flex justify-content-center" style="height:100%; padding-top: 10%">
+                    <div style="padding: 20px; width: 40%">
+                        <button type="button" style="height:10rem; width:100%" class="btn btn-primary">
+                            <div style="font-size: 50px; font-weight: bold;">Buy</div>
+                        </button>
+                    </div>
+                    <div style="padding: 20px; width: 40%">
+                        <button type="button" style="height:10rem; width:100%" class="btn btn-primary">
+                                <div style="font-size: 50px; font-weight: bold;">Sell</div>
+                            </button>                        
+                    </div>
+                        <!--2 CENTERED BUTTONS:
                         1. Rent out your parking space
                             Form to fill in your information
                             Add smart contracts to marker popups on MAP
                         2. Rent a parking space
                             Form to fill in your information
                             Map with markers that popup with more information on the parking space
+                        -->
                     <!-- <div id="loader" class="text-center">
                         <p class="text-center">Loading...</p>
                     </div>
