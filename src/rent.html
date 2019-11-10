@@ -104,17 +104,23 @@
             ]) {
                 mark = new google.maps.Marker({
                     position: marker,
-                    map: var_map,
-                    animation: google.maps.Animation.DROP,
+                    map: var_map
                 });
-                mark.addListener('click', toggleBounce);
+                mark.addListener('click', function(){
+                    infowindow = new google.maps.InfoWindow({
+                        content: " "
+                    });
+                    infowindow.setContent('<p>Event Name: ' + this.title + '</p>' +
+                    '<p>Event Type: ' + this.etype + '</p>' +
+                    '<p>Cause: ' + this.cause + '</p>' +
+                    '<p>Date: ' + this.date + '</p>' +
+                    '<p>Time: ' + this.time + '</p>' +
+                    '<button onclick="myFunction()">Click me</button>');
+                    infowindow.open(var_map,this);
+                });
             }
             function toggleBounce() {
-                if (marker.getAnimation() !== null) {
-                    marker.setAnimation(null);
-                } else {
-                    marker.setAnimation(google.maps.Animation.BOUNCE);
-                }
+
             }
         }
 
