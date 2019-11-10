@@ -79,7 +79,7 @@
     <script>
         // Regular map
         function regular_map() {
-            var var_location = new google.maps.LatLng(43.4687950000, -80.5307640000);
+            var var_location = new google.maps.LatLng(43.4632383,-80.5261202);
 
             var var_mapoptions = {
                 center: var_location,
@@ -91,6 +91,16 @@
             for (marker of [
                 var_location,
                 new google.maps.LatLng(43.469283, -80.533987),
+                new google.maps.LatLng(43.4691273,-80.5374295),
+                new google.maps.LatLng(43.469172,-80.5239896),
+                new google.maps.LatLng(43.4699443,-80.5256068),
+                new google.maps.LatLng(43.467418,-80.5317),
+                new google.maps.LatLng(43.47717,-80.542679),
+                new google.maps.LatLng(43.471646,-80.531873),
+                new google.maps.LatLng(43.4651313,-80.5198416),
+                // new google.maps.LatLng(43.4691273,-80.5374295),
+                // new google.maps.LatLng(43.4691273,-80.5374295),
+                // new google.maps.LatLng(43.4691273,-80.5374295),
             ]) {
                 new google.maps.Marker({
                     position: marker,
