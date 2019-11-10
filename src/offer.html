@@ -60,66 +60,46 @@
 
     <!-- form -->
     <div class="jumbotron pt-3">
-        <h2 class="text-center">Information to Offer Parking Space</h2>
+        <h2 class="text-center">Complete Form to Offer Parking Space</h2>
+
         <form style="margin: 0 auto; min-width: 60%">
             <div class="form-row">
                 <div class="col-md-8 mb-3">
-                    <label for="validationServer01">Wallet Address</label>
-                    <input type="text" class="form-control is-valid" id="disabledInput"
-                        placeholder="Enter wallet address" value="0x" required>
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
+                    <label for="validationDefault01">Wallet Address</label>
+                    <input type="text" class="form-control" id="validationDefault01" placeholder="Enter wallet address"
+                        value="" required>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <label for="validationServerUsername">Amount</label>
+                    <label for="validationDefaultUsername">Amount</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroupPrepend3">Ξ</span>
+                            <span class="input-group-text" id="inputGroupPrepend2">Ξ</span>
                         </div>
-                        <input type="text" class="form-control is-invalid" id="validationServerUsername"
-                            placeholder="ETH" aria-describedby="inputGroupPrepend3" required>
-                        <div class="invalid-feedback">
-                            Please enter a valid amount of Ethereum.
-                        </div>
+                        <input type="text" class="form-control" id="validationDefaultUsername" placeholder="ETH"
+                            aria-describedby="inputGroupPrepend2" required>
                     </div>
                 </div>
             </div>
             <div class="form-row">
                 <div class="col-md-6 mb-3">
-                    <label for="validationServer03">Parking Space Address</label>
-                    <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Address"
-                        required>
-                    <div class="invalid-feedback">
-                        Please provide a valid address.
-                    </div>
+                    <label for="validationDefault03">Parking Space Address</label>
+                    <input type="text" class="form-control" id="validationDefault03" placeholder="Address" required>
                 </div>
                 <div class="col-md-3 mb-3">
-                    <label for="validationServer04">Start Date</label>
-                    <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="Start"
-                        required>
-                    <div class="invalid-feedback">
-                        Please provide a valid date.
-                    </div>
+                    <label for="validationDefault04">Start Date</label>
+                    <input type="text" class="form-control" id="validationDefault04" placeholder="DD/MM/YY" required>
                 </div>
                 <div class="col-md-3 mb-3">
-                    <label for="validationServer05">End Date</label>
-                    <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="End"
-                        required>
-                    <div class="invalid-feedback">
-                        Please provide a valid date.
-                    </div>
+                    <label for="validationDefault05">End Date</label>
+                    <input type="text" class="form-control" id="validationDefault05" placeholder="DD/MM/YY" required>
                 </div>
             </div>
             <div class="form-group">
                 <div class="form-check">
-                    <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
-                    <label class="form-check-label" for="invalidCheck3">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                    <label class="form-check-label" for="invalidCheck2">
                         Agree to terms and conditions
                     </label>
-                    <div class="invalid-feedback">
-                        You must agree before submitting.
-                    </div>
                 </div>
             </div>
             <button class="btn btn-primary" type="submit">Submit form</button>
