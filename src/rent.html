@@ -89,33 +89,79 @@
             var var_map = new google.maps.Map(document.getElementById("map-container"), var_mapoptions);
 
             for (marker of [
-                var_location,
-                new google.maps.LatLng(43.469283, -80.533987),
-                new google.maps.LatLng(43.4691273, -80.5374295),
-                new google.maps.LatLng(43.469172, -80.5239896),
-                new google.maps.LatLng(43.4699443, -80.5256068),
-                new google.maps.LatLng(43.4680743, -80.5338915),
-                new google.maps.LatLng(43.47717, -80.542679),
-                new google.maps.LatLng(43.4766441, -80.5475478),
-                new google.maps.LatLng(43.4651313, -80.5198416),
-                new google.maps.LatLng(43.4668072, -80.5245347),
-                new google.maps.LatLng(43.4678433, -80.542996),
-                new google.maps.LatLng(43.4721977, -80.5474811),
+                {
+                    location: var_location,
+                    title: "The CIGI Campus",
+                    price: 0.47,
+                },
+                {
+                    location: new google.maps.LatLng(43.469283, -80.533987),
+                    title: "Alex's Parking",
+                    price: 0.47,
+                },
+                {
+                    location: new google.maps.LatLng(43.4691273, -80.5374295),
+                    title: "Dereck's Parking Lot",
+                    price: 0.47,
+                },
+                {
+                    location: new google.maps.LatLng(43.469172, -80.5239896),
+                    title: "Large Parking",
+                    price: 0.47,
+                },
+                {
+                    location: new google.maps.LatLng(43.4699443, -80.5256068),
+                    title: "Temporary Parking",
+                    price: 0.47,
+                },
+                {
+                    location: new google.maps.LatLng(43.4680743, -80.5338915),
+                    title: "Evan's Parking Spots",
+                    price: 0.47,
+                },
+                {
+                    location: new google.maps.LatLng(43.47717, -80.542679),
+                    title: "Cheap Paid Parking",
+                    price: 0.47,
+                },
+                {
+                    location: new google.maps.LatLng(43.4766441, -80.5475478),
+                    title: "Wilfred Laurier University Parking Lot A",
+                    price: 0.47,
+                },
+                {
+                    location: new google.maps.LatLng(43.4651313, -80.5198416),
+                    title: "Easy Parking",
+                    price: 0.47,
+                },
+                {
+                    location: new google.maps.LatLng(43.4668072, -80.5245347),
+                    title: "Parking Lot 2",
+                    price: 0.47,
+                },
+                {
+                    location: new google.maps.LatLng(43.4678433, -80.542996),
+                    title: "August's Home Parking Lot",
+                    price: 0.47,
+                },
+                {
+                    location: new google.maps.LatLng(43.4721977, -80.5474811),
+                    title: "Parking 123",
+                    price: 0.47,
+                }
             ]) {
                 mark = new google.maps.Marker({
-                    position: marker,
+                    position: marker.location,
                     map: var_map
                 });
                 mark.addListener('click', function(){
                     infowindow = new google.maps.InfoWindow({
                         content: " "
                     });
-                    infowindow.setContent('<p>Event Name: ' + this.title + '</p>' +
-                    '<p>Event Type: ' + this.etype + '</p>' +
-                    '<p>Cause: ' + this.cause + '</p>' +
-                    '<p>Date: ' + this.date + '</p>' +
-                    '<p>Time: ' + this.time + '</p>' +
-                    '<button onclick="myFunction()">Click me</button>');
+                    infowindow.setContent(
+                        '<p>Name: ' + marker.title + '</p>' +
+                        '<p>Price: Ξ ' + Math.round(Math.random() * 10000) / 10000.0 + '</p>'
+                    );
                     infowindow.open(var_map,this);
                 });
             }

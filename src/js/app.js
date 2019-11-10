@@ -57,16 +57,13 @@ App = {
       
       App.user = await App.contracts.User.deployed()
       console.log(user)
-
-      
   },
 
   render: async () => {
       $('#account').html(App.account)
   }
-
-
 }
+
 $(() => {
     $(window).load(() => {
         App.load()
