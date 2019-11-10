@@ -155,12 +155,18 @@
                     map: var_map
                 });
                 mark.addListener('click', function(){
+                    var result           = '';
+                    var characters       = 'ABCDEFabcdef0123456789';
+                    var charactersLength = characters.length;
+                    for ( var i = 0; i < 40; i++ ) {
+                       result += characters.charAt(Math.floor(Math.random() * charactersLength));
+                    }
                     infowindow = new google.maps.InfoWindow({
                         content: " "
                     });
                     infowindow.setContent(
-                        '<p>Name: ' + marker.title + '</p>' +
-                        '<p>Price: Ξ ' + Math.round(Math.random() * 10000) / 10000.0 + '</p>'
+                        '<p>Name: 0x' + result + '</p>' +
+                        '<p>Price: Ξ ' + Math.round(Math.random() * 10000) / 20000.0 + '</p>'
                     );
                     infowindow.open(var_map,this);
                 });
