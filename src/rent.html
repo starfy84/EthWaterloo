@@ -121,21 +121,28 @@
     <script>
         // Regular map
         function regular_map() {
-            var var_location = new google.maps.LatLng(40.725118, -73.997699);
+            var var_location = new google.maps.LatLng(43.4687950000, -80.5307640000);
 
             var var_mapoptions = {
                 center: var_location,
-                zoom: 14
+                zoom: 17
             };
 
-            var var_map = new google.maps.Map(document.getElementById("map-container"),
-                var_mapoptions);
+            var var_map = new google.maps.Map(document.getElementById("map-container"), var_mapoptions);
 
             var var_marker = new google.maps.Marker({
                 position: var_location,
                 map: var_map,
-                title: "New York"
+                title: "CGCI"
             });
+
+            var var_marker2 = new google.maps.Marker({
+                position: new google.maps.LatLng(43.469283, -80.533987),
+                map: var_map,
+                title: "Seagram Drive Free Lot"
+            });
+
+            
         }
 
         // Initialize maps
