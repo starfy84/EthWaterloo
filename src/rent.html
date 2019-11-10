@@ -130,19 +130,15 @@
 
             var var_map = new google.maps.Map(document.getElementById("map-container"), var_mapoptions);
 
-            var var_marker = new google.maps.Marker({
-                position: var_location,
-                map: var_map,
-                title: "CGCI"
-            });
-
-            var var_marker2 = new google.maps.Marker({
-                position: new google.maps.LatLng(43.469283, -80.533987),
-                map: var_map,
-                title: "Seagram Drive Free Lot"
-            });
-
-            
+            for (marker of [
+                var_location,
+                new google.maps.LatLng(43.469283, -80.533987),
+            ]) {
+                new google.maps.Marker({
+                    position: marker,
+                    map: var_map,
+                });
+            }
         }
 
         // Initialize maps
