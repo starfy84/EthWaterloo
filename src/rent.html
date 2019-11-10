@@ -40,13 +40,14 @@
             <ul class="navbar-nav px-0 ml-auto">
                 <li class="nav-item text-nowrap d-none d-sm-none d-sm-block dropdown">
                     <small>
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span id="account"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="buy.html">Buy</a>
-                            <a class="dropdown-item" href="sell.html">Sell</a>
-<!--                             <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="rent.html">Rent</a>
+                            <a class="dropdown-item" href="offer.html">Offer</a>
+                            <!--                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Change Wallet</a> -->
                         </div>
                     </small>
@@ -57,22 +58,24 @@
         </div>
     </nav>
 
+    <div id="map-container" class="map-container z-depth-1-half" style="height:500px">
 
+    </div>
 
     <!-- <div class="container-fluid">
         <div class="row">
             <main role="main" class="col-lg-12 d-flex justify-content-center" style="height:100%; padding-top: 10%">
                 <div style="padding: 20px; width: 40%">
                     <button type="button" style="height:10rem; width:100%" class="btn btn-primary">
-                        <div style="font-size: 50px; font-weight: bold;">Buy</div>
+                        <div style="font-size: 50px; font-weight: bold;">Rent</div>
                     </button>
                 </div>
                 <div style="padding: 20px; width: 40%">
                     <button type="button" style="height:10rem; width:100%" class="btn btn-primary">
-                        <div style="font-size: 50px; font-weight: bold;">Sell</div>
+                        <div style="font-size: 50px; font-weight: bold;">Offer</div>
                     </button>
                 </div> -->
-                <!--2 CENTERED BUTTONS:
+    <!--2 CENTERED BUTTONS:
                         1. Rent out your parking space
                             Form to fill in your information
                             Add smart contracts to marker popups on MAP
@@ -80,7 +83,7 @@
                             Form to fill in your information
                             Map with markers that popup with more information on the parking space
                         -->
-                <!-- <div id="loader" class="text-center">
+    <!-- <div id="loader" class="text-center">
                         <p class="text-center">Loading...</p>
                     </div>
                     <div id="content">
@@ -99,7 +102,7 @@
                         <ul id="completedTaskList" class="list-unstyled">
                         </ul>
                     </div> -->
-            <!-- </main>
+    <!-- </main>
         </div>
     </div> -->
 
@@ -109,6 +112,35 @@
     <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
     <script src="./js/app.js"></script>
+
+    <!-- google maps -->
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyDnBhYw2o5skfDE6ysmRAi0sQdcy6Iq91g"></script>
+
+    <!-- google maps settings -->
+    <!-- Google Maps settings -->
+    <script>
+        // Regular map
+        function regular_map() {
+            var var_location = new google.maps.LatLng(40.725118, -73.997699);
+
+            var var_mapoptions = {
+                center: var_location,
+                zoom: 14
+            };
+
+            var var_map = new google.maps.Map(document.getElementById("map-container"),
+                var_mapoptions);
+
+            var var_marker = new google.maps.Marker({
+                position: var_location,
+                map: var_map,
+                title: "New York"
+            });
+        }
+
+        // Initialize maps
+        google.maps.event.addDomListener(window, 'load', regular_map);
+    </script>
 </body>
 
 </html>
