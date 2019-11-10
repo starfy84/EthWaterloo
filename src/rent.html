@@ -79,7 +79,7 @@
     <script>
         // Regular map
         function regular_map() {
-            var var_location = new google.maps.LatLng(43.4632383,-80.5261202);
+            var var_location = new google.maps.LatLng(43.4632383, -80.5261202);
 
             var var_mapoptions = {
                 center: var_location,
@@ -91,23 +91,34 @@
             for (marker of [
                 var_location,
                 new google.maps.LatLng(43.469283, -80.533987),
-                new google.maps.LatLng(43.4691273,-80.5374295),
-                new google.maps.LatLng(43.469172,-80.5239896),
-                new google.maps.LatLng(43.4699443,-80.5256068),
-                new google.maps.LatLng(43.4680743,-80.5338915),
-                new google.maps.LatLng(43.47717,-80.542679),
-                new google.maps.LatLng(43.4766441,-80.5475478),
-                new google.maps.LatLng(43.4651313,-80.5198416),
-                new google.maps.LatLng(43.4668072,-80.5245347),
-                new google.maps.LatLng(43.4678433,-80.542996),
-                new google.maps.LatLng(43.4721977,-80.5474811),
+                new google.maps.LatLng(43.4691273, -80.5374295),
+                new google.maps.LatLng(43.469172, -80.5239896),
+                new google.maps.LatLng(43.4699443, -80.5256068),
+                new google.maps.LatLng(43.4680743, -80.5338915),
+                new google.maps.LatLng(43.47717, -80.542679),
+                new google.maps.LatLng(43.4766441, -80.5475478),
+                new google.maps.LatLng(43.4651313, -80.5198416),
+                new google.maps.LatLng(43.4668072, -80.5245347),
+                new google.maps.LatLng(43.4678433, -80.542996),
+                new google.maps.LatLng(43.4721977, -80.5474811),
             ]) {
-                new google.maps.Marker({
+                mark = new google.maps.Marker({
                     position: marker,
                     map: var_map,
+                    animation: google.maps.Animation.DROP,
                 });
+                mark.addListener('click', toggleBounce);
+            }
+            function toggleBounce() {
+                if (marker.getAnimation() !== null) {
+                    marker.setAnimation(null);
+                } else {
+                    marker.setAnimation(google.maps.Animation.BOUNCE);
+                }
             }
         }
+
+
 
         // Initialize maps
         google.maps.event.addDomListener(window, 'load', regular_map);
