@@ -1,80 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>David Park</title>
 
-        <!-- Bootstrap -->
-        <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>David Park</title>
 
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
+    <!-- Bootstrap -->
+    <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <style>
-            body {
-                background-color: rgba(7, 105, 255, 0.2);
-            }
-            main {
-                margin-top: 60px;
-            }
+    <style>
+        body {
+            background-color: rgba(7, 105, 255, 0.2);
+        }
 
-            #content {
-                display: none;
-            }
+        main {
+            margin-top: 60px;
+        }
 
-            form {
-                width: 350px;
-                margin-bottom: 10px;
-            }
+        #content {
+            display: none;
+        }
 
-            ul {
-                margin-bottom: 0px;
-            }
+        form {
+            width: 350px;
+            margin-bottom: 10px;
+        }
 
-            #completedTaskList .content {
-                color: grey;
-                text-decoration: line-through;
-            }
-        </style>
-    </head>
-    <body>
-        <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-            <!-- <ul class="navbar-nav mr-auto"> -->
-                <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="" target="_self">David Park</a>
-                <!-- <li class="nav-item"> -->
-                    <a class="nav-link nav-item col-sm-2 col-md-2 mr-0" href="#">Link</a>
-                    <a class="nav-link nav-item col-sm-2 col-md-2 mr-0" href="#">Link</a>
-                    <a class="nav-link nav-item col-sm-2 col-md-2 mr-0" href="#">Link</a>
-                    <a class="nav-link nav-item col-sm-2 col-md-2 mr-0" href="#">Link</a>
-                <!-- </li> -->
-            <!-- </ul> -->
-            <ul class="navbar-nav px-3">
-                <li class="nav-item text-nowrap d-none d-sm-none d-sm-block">
-                    <small><a class="nav-link" href="#"><span id="account"></span></a></small>
-                </li>
+        ul {
+            margin-bottom: 0px;
+        }
+
+        #completedTaskList .content {
+            color: grey;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg navbar-expand-xl fixed-top navbar-expand-md bg-dark flex-md-nowrap shadows sticky-top "
+        style="background-color: #e3f2fd;">
+        <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="mainbar">
+            <a class="navbar-brand" href="index.html">David Park</a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <a class="nav-item nav-link" href="#">Link</a>
+                <a class="nav-item nav-link" href="#">Link</a>
+                <a class="nav-item nav-link" href="#">Link</a>
+                <a class="nav-item nav-link" href="#">Link</a>
+                <a class="nav-item nav-link" href="#">Link</a>
+                <a class="nav-item nav-link" href="#">Link</a>
+                <a class="nav-item nav-link" href="#">Link</a>
             </ul>
-        </nav>
-        <div class="container-fluid">
-            <div class="row">
-                <main role="main" class="col-lg-12 d-flex justify-content-center" style="height:100%; padding-top: 10%">
-                    <div style="padding: 20px; width: 40%">
-                        <button type="button" style="height:10rem; width:100%" class="btn btn-primary">
-                            <div style="font-size: 50px; font-weight: bold;">Buy</div>
-                        </button>
-                    </div>
-                    <div style="padding: 20px; width: 40%">
-                        <button type="button" style="height:10rem; width:100%" class="btn btn-primary">
-                                <div style="font-size: 50px; font-weight: bold;">Sell</div>
-                            </button>                        
-                    </div>
-                        <!--2 CENTERED BUTTONS:
+        </div>
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap d-none d-sm-none d-sm-block">
+                <small><a class="nav-link" href="#"><span id="account"></span></a></small>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <main role="main" class="col-lg-12 d-flex justify-content-center" style="height:100%; padding-top: 10%">
+                <div style="padding: 20px; width: 40%">
+                    <button type="button" style="height:10rem; width:100%" class="btn btn-primary">
+                        <div style="font-size: 50px; font-weight: bold;">Buy</div>
+                    </button>
+                </div>
+                <div style="padding: 20px; width: 40%">
+                    <button type="button" style="height:10rem; width:100%" class="btn btn-primary">
+                        <div style="font-size: 50px; font-weight: bold;">Sell</div>
+                    </button>
+                </div>
+                <!--2 CENTERED BUTTONS:
                         1. Rent out your parking space
                             Form to fill in your information
                             Add smart contracts to marker popups on MAP
@@ -82,7 +97,7 @@
                             Form to fill in your information
                             Map with markers that popup with more information on the parking space
                         -->
-                    <!-- <div id="loader" class="text-center">
+                <!-- <div id="loader" class="text-center">
                         <p class="text-center">Loading...</p>
                     </div>
                     <div id="content">
@@ -101,15 +116,16 @@
                         <ul id="completedTaskList" class="list-unstyled">
                         </ul>
                     </div> -->
-                </main>
-            </div>
+            </main>
         </div>
+    </div>
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
-        <script src="app.js"></script>
-    </body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+    <script src="app.js"></script>
+</body>
+
 </html>
