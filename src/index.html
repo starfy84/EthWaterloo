@@ -11,6 +11,8 @@
     <!-- Bootstrap -->
     <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Styles -->
+    <link href="./css/styles.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -21,6 +23,7 @@
     <style>
         body {
             background-color: rgba(7, 105, 255, 0.2);
+            background:linear-gradient(to right, rgba(7, 105, 255, 0.9), rgba(7, 105, 255, 0.4));
         }
 
         main {
@@ -56,22 +59,36 @@
             </button>
         </div>
         <div class="collapse navbar-collapse" id="mainbar">
-            <a class="navbar-brand" href="index.html">David Park</a>
+            <a class="navbar-brand dropdown-toggle" href="index.html">David Park</a>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <a class="nav-item nav-link" href="#">Link</a>
-                <a class="nav-item nav-link" href="#">Link</a>
-                <a class="nav-item nav-link" href="#">Link</a>
+                <a class="nav-item nav-link" href="index.html">Home</a>
+                <a class="nav-item nav-link" href="#">About Us</a>
+                <a class="nav-item nav-link" href="#">Contact Us</a>
                 <a class="nav-item nav-link" href="#">Link</a>
                 <a class="nav-item nav-link" href="#">Link</a>
                 <a class="nav-item nav-link" href="#">Link</a>
                 <a class="nav-item nav-link" href="#">Link</a>
             </ul>
         </div>
-        <ul class="navbar-nav px-0">
-            <li class="nav-item text-nowrap d-none d-sm-none d-sm-block">
-                <small><a class="nav-link" href="#"><span id="account"></span></a></small>
-            </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav px-0">
+                <li class="nav-item text-nowrap d-none d-sm-none d-sm-block dropdown">
+                    <small>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span id="account"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </small>
+
+                </li>
+
+            </ul>
+        </div>
     </nav>
 
 
@@ -125,7 +142,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
-    <script src="app.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
