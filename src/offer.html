@@ -40,13 +40,14 @@
             <ul class="navbar-nav px-0 ml-auto">
                 <li class="nav-item text-nowrap d-none d-sm-none d-sm-block dropdown">
                     <small>
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span id="account"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="rent.html">Rent</a>
                             <a class="dropdown-item" href="offer.html">Offer</a>
-<!--                             <div class="dropdown-divider"></div>
+                            <!--                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Change Wallet</a> -->
                         </div>
                     </small>
@@ -57,51 +58,72 @@
         </div>
     </nav>
 
-
-
-    <!-- <div class="container-fluid">
-        <div class="row">
-            <main role="main" class="col-lg-12 d-flex justify-content-center" style="height:100%; padding-top: 10%">
-                <div style="padding: 20px; width: 40%">
-                    <button type="button" style="height:10rem; width:100%" class="btn btn-primary">
-                        <div style="font-size: 50px; font-weight: bold;">Rent</div>
-                    </button>
-                </div>
-                <div style="padding: 20px; width: 40%">
-                    <button type="button" style="height:10rem; width:100%" class="btn btn-primary">
-                        <div style="font-size: 50px; font-weight: bold;">Offer</div>
-                    </button>
-                </div> -->
-                <!--2 CENTERED BUTTONS:
-                        1. Rent out your parking space
-                            Form to fill in your information
-                            Add smart contracts to marker popups on MAP
-                        2. Rent a parking space
-                            Form to fill in your information
-                            Map with markers that popup with more information on the parking space
-                        -->
-                <!-- <div id="loader" class="text-center">
-                        <p class="text-center">Loading...</p>
+    <!-- form -->
+    <div class="jumbotron">
+        <form>
+            <div class="form-row">
+                <div class="col-md-8 mb-3">
+                    <label for="validationServer01">Wallet Address</label>
+                    <input type="text" class="form-control is-valid" id="validationServer01"
+                        placeholder="Enter wallet address" value="Mark" required>
+                    <div class="valid-feedback">
+                        Looks good!
                     </div>
-                    <div id="content">
-                        <form onSubmit="App.createTask(); return false;">
-                            <input id="newTask" type="text" class="form-control" placeholder="Add task..." required>
-                            <input type="submit" hidden="">
-                        </form>
-                        <ul id="taskList" class="list-unstyled">
-                            <div class="taskTemplate" class="checkbox" style="display: none">
-                                <label>
-                                    <input type="checkbox" />
-                                    <span class="content">Task content goes here...</span>
-                                </label>
-                            </div>
-                        </ul>
-                        <ul id="completedTaskList" class="list-unstyled">
-                        </ul>
-                    </div> -->
-            <!-- </main>
-        </div>
-    </div> -->
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationServerUsername">Username</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                        </div>
+                        <input type="text" class="form-control is-invalid" id="validationServerUsername"
+                            placeholder="Username" aria-describedby="inputGroupPrepend3" required>
+                        <div class="invalid-feedback">
+                            Please choose a username.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationServer03">City</label>
+                    <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="City"
+                        required>
+                    <div class="invalid-feedback">
+                        Please provide a valid city.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationServer04">State</label>
+                    <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="State"
+                        required>
+                    <div class="invalid-feedback">
+                        Please provide a valid state.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationServer05">Zip</label>
+                    <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="Zip"
+                        required>
+                    <div class="invalid-feedback">
+                        Please provide a valid zip.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+                    <label class="form-check-label" for="invalidCheck3">
+                        Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                        You must agree before submitting.
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit form</button>
+        </form>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
