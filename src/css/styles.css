@@ -41,3 +41,29 @@
   -webkit-animation-name: slideIn;
   animation-name: slideIn;
 }
+body {
+    background-color: rgba(7, 105, 255, 0.2);
+    background:linear-gradient(to right, rgba(7, 105, 255, 0.9), rgba(7, 105, 255, 0.4));
+}
+
+main {
+    margin-top: 60px;
+}
+
+#content {
+    display: none;
+}
+
+form {
+    width: 350px;
+    margin-bottom: 10px;
+}
+
+ul {
+    margin-bottom: 0px;
+}
+
+#completedTaskList .content {
+    color: grey;
+    text-decoration: line-through;
+}
