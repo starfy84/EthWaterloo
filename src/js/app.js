@@ -1,9 +1,11 @@
+
 App = {
     contracts: {},
 
     load: async () => {
         //Load app...
         console.log("app loading")
+        
         await App.loadWeb3()
         await App.loadAccount()
         await App.loadContract()
@@ -65,7 +67,6 @@ App = {
 
 
 }
-
 $(() => {
     $(window).load(() => {
         App.load()
