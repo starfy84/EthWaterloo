@@ -10,6 +10,7 @@
 
     <!-- Bootstrap -->
     <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 
     <!-- Styles -->
     <link href="./css/styles.css" rel="stylesheet">
@@ -59,9 +60,8 @@
     </nav>
 
     <!-- form -->
-    <div class="jumbotron pt-3">
+    <div class="jumbotron pt-3 bootstrap-iso">
         <h2 class="text-center">Complete Form to Offer Parking Space</h2>
-
         <form style="margin: 0 auto; min-width: 60%">
             <div class="form-row">
                 <div class="col-md-8 mb-3">
@@ -87,11 +87,11 @@
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="validationDefault04">Start Date</label>
-                    <input type="text" class="form-control" id="validationDefault04" placeholder="DD/MM/YY" required>
+                    <input type="text" name="date" class="form-control" id="validationDefault04" placeholder="DD/MM/YY" required>
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="validationDefault05">End Date</label>
-                    <input type="text" class="form-control" id="validationDefault05" placeholder="DD/MM/YY" required>
+                    <input type="text" name="date" class="form-control" id="validationDefault05" placeholder="DD/MM/YY" required>
                 </div>
             </div>
             <div class="form-group">
@@ -111,6 +111,21 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var date_input=$('input[name="date"]'); //our date input has the name "date"
+            var container=$('.bootstrap-iso').length>0 ? $('.bootstrap-iso').parent() : "body";
+            var options={
+                format: 'mm/dd/yyyy',
+                orientation: 'top',
+                container: container,
+                todayHighlight: true,
+                autoclose: true,
+            };
+            date_input.datepicker(options);
+        })
+    </script>
     <script src="./js/app.js"></script>
 </body>
 
