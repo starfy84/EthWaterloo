@@ -91,82 +91,78 @@
             for (marker of [
                 {
                     location: var_location,
-                    title: "The CIGI Campus",
-                    price: 0.47,
+                    title: "0xDe19634D099dE6411cfEf1Da7a5c2b97462703A3",
+                    price: 0.217,
                 },
                 {
                     location: new google.maps.LatLng(43.469283, -80.533987),
-                    title: "Alex's Parking",
-                    price: 0.47,
+                    title: "0x87cB4365D0E01098F190621b4840B27689406d2D",
+                    price: 0.210,
                 },
                 {
                     location: new google.maps.LatLng(43.4691273, -80.5374295),
-                    title: "Dereck's Parking Lot",
-                    price: 0.47,
+                    title: "0x7b01AEE568b3C4C02c7b4Da40A847f2a9A888b4B",
+                    price: 0.115,
                 },
                 {
                     location: new google.maps.LatLng(43.469172, -80.5239896),
-                    title: "Large Parking",
-                    price: 0.47,
+                    title: "0x0CAFFA0b4B4Dae7d6b2fF9033391e8a0F2D30fF0",
+                    price: 0.023,
                 },
                 {
                     location: new google.maps.LatLng(43.4699443, -80.5256068),
-                    title: "Temporary Parking",
-                    price: 0.47,
+                    title: "0x5AFa86107aF14AB69750e9739675CC1d88db7603",
+                    price: 0.532,
                 },
                 {
                     location: new google.maps.LatLng(43.4680743, -80.5338915),
-                    title: "Evan's Parking Spots",
-                    price: 0.47,
+                    title: "0x66b60869242177B770Ff5989dD3e3EE08c4c8a7C",
+                    price: 0.123,
                 },
                 {
                     location: new google.maps.LatLng(43.47717, -80.542679),
-                    title: "Cheap Paid Parking",
-                    price: 0.47,
+                    title: "0x7e62407aD18FbaF83AC587f7d92f343495B64d41",
+                    price: 0.513,
                 },
                 {
                     location: new google.maps.LatLng(43.4766441, -80.5475478),
-                    title: "Wilfred Laurier University Parking Lot A",
-                    price: 0.47,
+                    title: "0x39be52527236C4D084e7B0A8962d90735f5ce2De",
+                    price: 0.621,
                 },
                 {
                     location: new google.maps.LatLng(43.4651313, -80.5198416),
-                    title: "Easy Parking",
-                    price: 0.47,
+                    title: "0xCC8daEE2C56ee8B5B95fD1C083Eb232785542958",
+                    price: 0.331,
                 },
                 {
                     location: new google.maps.LatLng(43.4668072, -80.5245347),
-                    title: "Parking Lot 2",
-                    price: 0.47,
+                    title: "0x87cB4365D0E01098F190621b4840B27689406d2D",
+                    price: 0.152,
                 },
                 {
                     location: new google.maps.LatLng(43.4678433, -80.542996),
-                    title: "August's Home Parking Lot",
-                    price: 0.47,
+                    title: "0xDe19634D099dE6411cfEf1Da7a5c2b97462703A3",
+                    price: 0.200,
                 },
                 {
                     location: new google.maps.LatLng(43.4721977, -80.5474811),
-                    title: "0x02248D97b37CF3abefa3D2188bD47F5Ab91bB28e",
-                    price: 0.47,
+                    title: "0xDe19634D099dE6411cfEf1Da7a5c2b97462703A3",
+                    price: 0.101,
                 }
             ]) {
                 mark = new google.maps.Marker({
+                    title: marker.title,
+                    price: marker.price,
                     position: marker.location,
                     map: var_map
                 });
                 mark.addListener('click', function(){
-                    var result           = '';
-                    var characters       = 'ABCDEFabcdef0123456789';
-                    var charactersLength = characters.length;
-                    for ( var i = 0; i < 40; i++ ) {
-                       result += characters.charAt(Math.floor(Math.random() * charactersLength));
-                    }
                     infowindow = new google.maps.InfoWindow({
                         content: " "
                     });
                     infowindow.setContent(
-                        '<p>Name: 0x' + result + '</p>' +
-                        '<p>Price: Ξ ' + Math.round(Math.random() * 10000) / 20000.0 + '</p>'
+                        '<p>Name: ' + this.title + '</p>' +
+                        '<p>Price: Ξ ' +this.price + '</p>'
                     );
                     infowindow.open(var_map,this);
                 });
